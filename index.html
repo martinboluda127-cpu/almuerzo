@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍽️ Planificador de Comidas Compartido</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="header">
+        <h1>🍜 Planificador de Comidas Compartido</h1>
+        <div id="contador">
+            <span class="label">Comidas Totales:</span> 
+            <span id="total-comidas" class="value total">0</span>
+            <span class="label">| Quedan por Elegir:</span> 
+            <span id="restantes-comidas" class="value restantes">0</span>
+        </div>
+    </div>
+    
+    <div id="nueva-comida-form">
+        <label for="input-comida">Añadir Nueva Comida:</label>
+        <input type="text" id="input-comida" placeholder="Ej: Lasaña, Pollo al Curry..." required>
+        <button id="add-button">➕ Agregar</button>
+    </div>
+
+    <h2>Comidas Pendientes</h2>
+    <div id="lista-comidas">
+        </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

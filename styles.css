@@ -1,0 +1,159 @@
+/* Variables de color */
+:root {
+    --color-background: #f4f4f9;
+    --color-primary: #007bff;
+    --color-success: #28a745;
+    --color-warning: #ffc107;
+    --color-danger: #dc3545;
+    --color-neutral: #e9ecef;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 20px;
+}
+
+/* --- Encabezado y Contador --- */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 25px;
+}
+
+#contador {
+    background-color: var(--color-neutral);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#contador .value {
+    margin-left: 5px;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+#contador .total {
+    background-color: rgba(0, 123, 255, 0.1);
+    color: var(--color-primary);
+}
+
+#contador .restantes {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--color-danger);
+}
+
+/* --- Formulario de Añadir Comida --- */
+#nueva-comida-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#nueva-comida-form input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#nueva-comida-form button {
+    padding: 10px 20px;
+    background-color: var(--color-success);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+#nueva-comida-form button:hover {
+    background-color: #218838;
+}
+
+/* --- Lista de Comidas --- */
+#lista-comidas {
+    display: grid;
+    /* Diseño responsivo: mínimo 300px por columna */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.comida-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #e0e0e0;
+}
+
+.comida-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.comida-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+    font-size: 1.5em;
+}
+
+.comida-item p {
+    font-style: italic;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.comida-item button {
+    padding: 10px 15px;
+    background-color: var(--color-warning);
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.comida-item button:hover {
+    background-color: #ffc720;
+}
+
+/* --- Estilo para Comidas Seleccionadas --- */
+.comida-item.seleccionada {
+    border: 3px solid var(--color-danger);
+    background-color: #fff0f3; /* Fondo más claro */
+    opacity: 0.7;
+}
+
+.comida-item.seleccionada h3 {
+    color: var(--color-danger);
+    text-decoration: line-through;
+}
+
+.comida-item.seleccionada button {
+    background-color: #6c757d;
+    color: white;
+    cursor: not-allowed;
+}
